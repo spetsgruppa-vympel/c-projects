@@ -5,10 +5,17 @@
 #include <stdint.h>
 #include <string.h>
 
+// Enum used to map an integer to C type values
+typedef enum {
+    TYPE_CHAR,
+    TYPE_LONG,
+    TYPE_BOOL
+} TypeID;
+
 // Reads input as string. Used together with sanitize_input
 char *read_str_input(char *buf, size_t size) {
     if (fgets(buf, (int)size, stdin) == NULL) {
-        return;
+        return NULL;
     }
 
     // Strip trailing newline if present
@@ -18,7 +25,23 @@ char *read_str_input(char *buf, size_t size) {
 }
 
 // Sanitizes input for the given type
-void sanitize_input(char input, int type_id, void *out_value) {
-    if (input == NULL) return NULL;
-    if (type_id)
+void sanitize_input(const char *input, TypeID input_type, void *out_value) {
+    if (input == NULL) return;
+    switch(input_type) {
+        case TYPE_CHAR: { // Input is sanitized for CHAR type
+            // TODO
+            break;
+        }
+        
+        case TYPE_LONG: { // Input is sanitized for LONG type
+            // TODO
+            break;
+        }
+
+        case TYPE_BOOL: { // Input is sanitized for BOOL type
+            // TODO
+            break;
+        }
+    }
+
 }

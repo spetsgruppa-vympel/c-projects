@@ -3,7 +3,7 @@
 #include <time.h>
 #include "config.h"
 #include "input_utils.h"
-#include "generator.h"
+#include "passgen.h"
 
 int main() {
     // Define initial config before user setup
