@@ -1,5 +1,5 @@
 
-
+// Using the configuration struct received from main, return the final character pool that will be used to generate
 void placeholder_name () {
     const char lowercase_pool[] = "abcdefghjkmnpqrstuvwxyz";  // Removed "i", "l" and "o" for readability.
     const char uppercase_pool[] = "ABCDEFGHJKLMNPQRSTUVWXYZ";  // Removed "I" and "O" for readability.
